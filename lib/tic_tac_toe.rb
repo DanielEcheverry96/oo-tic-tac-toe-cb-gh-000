@@ -79,4 +79,21 @@ class TicTacToe
     status
   end
 
+    def full?
+      !@board.include?(" ")
+    end
+
+    def draw?
+      !won? && full?
+    end
+
+    def over?
+      won? || full?(board) || draw?(board)
+    end
+
+    def winner(board)
+      won = won?(board)
+      !over?(board) || !won?(board) ? nil : board[won[0]]
+    end
+  
   end
