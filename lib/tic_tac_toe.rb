@@ -96,18 +96,18 @@ class TicTacToe
       !over? || !won? ? nil : @board[won[0]]
     end
 
-    def play(board)
-      until over?(board)
-        turn(board)
+    def play
+      until over?
+        turn
       end
 
-      if won?(board)
-        puts "Congratulations #{winner(board)}!"
+      if won?
+        puts "Congratulations #{winner}!"
       end
 
-      if draw?(board)
+      if draw?
         puts "Cat's Game!"
       end
     end
-    
+
   end
