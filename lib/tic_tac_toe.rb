@@ -88,12 +88,12 @@ class TicTacToe
     end
 
     def over?
-      won? || full?(board) || draw?(board)
+      won? || full? || draw?
     end
 
-    def winner(board)
-      won = won?(board)
-      !over?(board) || !won?(board) ? nil : board[won[0]]
+    def winner
+      won = won?
+      !over? || !won? ? nil : @board[won[0]]
     end
   
   end
